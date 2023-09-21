@@ -1,0 +1,38 @@
+* {
+  font-family: arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  width: 652px;
+  height: 360px;
+}
+
+.output, .input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+textarea {
+  resize: none;
+  padding: 18px;
+  width: 200px !important;
+  height: 146px;
+  border-radius: 10px;
+  outline: none;
+  overflow: auto;
+  font-size: 20px;
+  margin-top: 10px;
+}
+  
+  
