@@ -4,7 +4,7 @@ import Button from "./components/Button";
 import Modal from "./components/Modal";
 import { useEffect, useState } from "react";
 import axios from "axios";
-require('dotenv').config();
+// require('dotenv').config();
 
 const App = () => {
   const [showModal, setShowModal] = useState(null);
@@ -18,8 +18,8 @@ const App = () => {
       method: 'GET',
       url: 'https://g-translate1.p.rapidapi.com/languages',
       headers: {
-        'X-RapidAPI-Host': process.env.RAPID_API_HOST,
-        'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+        'X-RapidAPI-Host': process.env.REACT_APP_RAPID_API_HOST,
+        'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
       }    
     };
 
