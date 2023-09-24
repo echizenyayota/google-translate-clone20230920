@@ -2,19 +2,46 @@ import TextBox from "./components/TextBox";
 import Arrows from "./components/Arrows";
 import Button from "./components/Button";
 import Modal from "./components/Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+require('dotenv').config();
 
 const App = () => {
   const [showModal, setShowModal] = useState(null);
   const [inputLanguage, setInputLanguage] = useState("English");
   const [outputLanguage, setOutputLanguage] = useState("Japanese");
+  const [languages, setLanguages] = useState(null);
+
+  const getLanguages = async () => {
+
+    const options = {
+      method: 'GET',
+      url: 'https://g-translate1.p.rapidapi.com/languages',
+      headers: {
+        'X-RapidAPI-Host': process.env.RAPID_API_HOST,
+        'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+      }    
+    };
+
+    try {
+      const response = await axios.request(options);
+      console.log(response.data);
+      setLanguages(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  console.log("languages", languages);
+
+  useEffect(() => {
+    getLanguages();
+  }, []);
 
   const handleClick = () => {
     setInputLanguage(outputLanguage);
     setOutputLanguage(inputLanguage);
   }
-
-  console.log("showModal", showModal);
 
   return (
     <div className="app">

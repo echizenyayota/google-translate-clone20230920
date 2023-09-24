@@ -23,6 +23,11 @@ const Modal = ({ setShowModal }) => {
           </svg>
         </div>
       </div>
+      <div className="option-container">
+        <ul>
+          
+        </ul>
+      </div>
     </div>
       
   
