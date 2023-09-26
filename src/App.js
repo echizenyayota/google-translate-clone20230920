@@ -62,7 +62,11 @@ const App = () => {
         />
       </>}
       
-      {showModal && <Modal setShowModal={setShowModal} />} 
+      {showModal && 
+        <Modal 
+          setShowModal={setShowModal}
+          languages={languages}
+      />} 
     </div>
   );
 }
