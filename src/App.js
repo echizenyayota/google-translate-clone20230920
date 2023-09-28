@@ -12,6 +12,8 @@ const App = () => {
   const [outputLanguage, setOutputLanguage] = useState("Japanese");
   const [languages, setLanguages] = useState(null);
 
+  console.log("inputLanguage", inputLanguage);
+
   const getLanguages = async () => {
 
     const options = {
