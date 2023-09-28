@@ -37,7 +37,6 @@ input {
 textarea {
   resize: none;
   padding: 18px;
-  width: 200px !important;
   height: 146px;
   border-radius: 10px;
   outline: none;

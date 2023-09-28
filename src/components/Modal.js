@@ -16,8 +16,6 @@ const Modal = ({ setShowModal, languages, chosenLanguage, setChosenLanguage }) =
     setShowModal(null);
   }
 
-  console.log(searchedLanguage);
-
   return (
     <div className="option-list">
       <div className="search-bar">
