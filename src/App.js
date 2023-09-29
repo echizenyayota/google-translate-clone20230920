@@ -79,7 +79,10 @@ const App = () => {
         <TextBox
           selectedLanguage={inputLanguage}
           style="input"
-          setShowModal={setShowModal} 
+          setShowModal={setShowModal}
+          textToTranslate={textToTranslate}
+          setTextToTranslate={setTextToTranslate}
+          setTranslatedText={setTranslatedText}
         />
           <div className="arrow-container" onClick={handleClick}>
             <Arrows />
@@ -87,7 +90,8 @@ const App = () => {
         <TextBox
           selectedLanguage={outputLanguage}
           style="output"
-          setShowModal={setShowModal} 
+          setShowModal={setShowModal}
+          translatedText={translatedText}
         />
         <div className="button-container" onCLick={translate}>
           <Button />
