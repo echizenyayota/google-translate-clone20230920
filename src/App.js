@@ -56,7 +56,7 @@ const App = () => {
     try {
       const response = await axios.request(options);
       console.log(response.data);
-      setTranslatedText(response.data);
+      setTranslatedText(response.data.data.translation);
     } catch (error) {
       console.error(error);
     }
@@ -93,7 +93,7 @@ const App = () => {
           setShowModal={setShowModal}
           translatedText={translatedText}
         />
-        <div className="button-container" onCLick={translate}>
+        <div className="button-container" onClick={translate}>
           <Button />
         </div>
       </>}
